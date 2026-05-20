@@ -185,6 +185,10 @@ apis:
       - type: Reference
         url: https://developers.google.com/forms/api/reference/rest
 common:
+  - type: GitHubOrganization
+    url: https://github.com/googleworkspace
+  - type: LinkedIn
+    url: https://www.linkedin.com/showcase/googleworkspace
   - type: Authentication
     url: https://developers.google.com/identity/protocols/oauth2
   - type: Console
