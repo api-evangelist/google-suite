@@ -1,192 +1,262 @@
 # Google Workspace (G Suite) (google-suite)
+
 Google Workspace (formerly G Suite) is a collection of cloud computing, productivity and collaboration tools, software and products developed and marketed by Google.
 
-**URL:** [Visit APIs.json URL](https://workspace.google.com/)
+**APIs.json:** [https://workspace.google.com/](https://workspace.google.com/)
 
-## Tags:
+## Scope
 
- - productivity, collaboration, cloud, google, workspace, enterprise
+- **Type:** Index
+
+## Tags
+
+- Cloud
+- Collaboration
+- Enterprise
+- Google
+- Productivity
+- Workspace
 
 ## Timestamps
 
-- **Created:** 2024-01-15 
-- **Modified:** 2024-01-15 
+- **Created:** 2024-01-15
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### Gmail API
+
 The Gmail API lets you view and manage Gmail mailbox data like threads, messages, and labels.
 
-**Human URL:** [https://developers.google.com/gmail/api](https://developers.google.com/gmail/api)
+- **Human URL:** [https://developers.google.com/gmail/api](https://developers.google.com/gmail/api)
+- **Base URL:** `https://gmail.googleapis.com`
 
+#### Tags
 
-#### Tags:
-
- - email, messaging, productivity
+- Email
+- Messaging
+- Productivity
 
 #### Properties
 
 - [Documentation](https://developers.google.com/gmail/api/guides)
-- [OpenAPI](https://gmail.googleapis.com/$discovery/rest?version=v1)
+- [OpenAPI](https://gmail.googleapis.com/$discovery/rest?version=v1) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Authentication](https://developers.google.com/gmail/api/auth/about-auth)
 - [Pricing](https://developers.google.com/gmail/api/reference/quota)
+- [Postman Collection](collections/google-suite.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-suite.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Google Calendar API
+
 The Google Calendar API lets you integrate your app with Google Calendar, creating new ways for users to engage with their calendars.
 
-**Human URL:** [https://developers.google.com/calendar](https://developers.google.com/calendar)
+- **Human URL:** [https://developers.google.com/calendar](https://developers.google.com/calendar)
+- **Base URL:** `https://www.googleapis.com/calendar/v3`
 
+#### Tags
 
-#### Tags:
-
- - calendar, scheduling, events, productivity
+- Calendar
+- Events
+- Productivity
+- Scheduling
 
 #### Properties
 
 - [Documentation](https://developers.google.com/calendar/api/guides/overview)
-- [OpenAPI](https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest)
+- [OpenAPI](https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Authentication](https://developers.google.com/calendar/api/guides/auth)
 - [Quickstart](https://developers.google.com/calendar/api/quickstart/python)
+- [Postman Collection](collections/google-suite.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-suite.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Google Drive API
+
 The Google Drive API allows you to create apps that leverage Google Drive cloud storage.
 
-**Human URL:** [https://developers.google.com/drive](https://developers.google.com/drive)
+- **Human URL:** [https://developers.google.com/drive](https://developers.google.com/drive)
+- **Base URL:** `https://www.googleapis.com/drive/v3`
 
+#### Tags
 
-#### Tags:
-
- - storage, files, cloud, collaboration
+- Cloud
+- Collaboration
+- Files
+- Storage
 
 #### Properties
 
 - [Documentation](https://developers.google.com/drive/api/guides/about-sdk)
-- [OpenAPI](https://www.googleapis.com/discovery/v1/apis/drive/v3/rest)
+- [OpenAPI](https://www.googleapis.com/discovery/v1/apis/drive/v3/rest) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Authentication](https://developers.google.com/drive/api/guides/about-auth)
 - [Pricing](https://developers.google.com/drive/api/guides/limits)
+- [Postman Collection](collections/google-suite.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-suite.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Google Docs API
+
 The Google Docs API lets you create and modify documents programmatically.
 
-**Human URL:** [https://developers.google.com/docs/api](https://developers.google.com/docs/api)
+- **Human URL:** [https://developers.google.com/docs/api](https://developers.google.com/docs/api)
+- **Base URL:** `https://docs.googleapis.com/v1`
 
+#### Tags
 
-#### Tags:
-
- - documents, productivity, collaboration, word-processing
+- Collaboration
+- Documents
+- Productivity
+- Word-Processing
 
 #### Properties
 
 - [Documentation](https://developers.google.com/docs/api/how-tos/overview)
-- [OpenAPI](https://docs.googleapis.com/$discovery/rest?version=v1)
+- [OpenAPI](https://docs.googleapis.com/$discovery/rest?version=v1) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Quickstart](https://developers.google.com/docs/api/quickstart/python)
+- [Postman Collection](collections/google-suite.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-suite.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Google Sheets API
+
 The Google Sheets API lets you read, write, and format Google Sheets data with your preferred programming language.
 
-**Human URL:** [https://developers.google.com/sheets/api](https://developers.google.com/sheets/api)
+- **Human URL:** [https://developers.google.com/sheets/api](https://developers.google.com/sheets/api)
+- **Base URL:** `https://sheets.googleapis.com/v4`
 
+#### Tags
 
-#### Tags:
-
- - spreadsheets, data, productivity, collaboration
+- Collaboration
+- Data
+- Productivity
+- Spreadsheets
 
 #### Properties
 
 - [Documentation](https://developers.google.com/sheets/api/guides/concepts)
-- [OpenAPI](https://sheets.googleapis.com/$discovery/rest?version=v4)
+- [OpenAPI](https://sheets.googleapis.com/$discovery/rest?version=v4) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Authentication](https://developers.google.com/sheets/api/guides/authorizing)
 - [Samples](https://developers.google.com/sheets/api/samples)
+- [Postman Collection](collections/google-suite.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-suite.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Google Slides API
+
 The Google Slides API lets you create and modify Google Slides presentations programmatically.
 
-**Human URL:** [https://developers.google.com/slides](https://developers.google.com/slides)
+- **Human URL:** [https://developers.google.com/slides](https://developers.google.com/slides)
+- **Base URL:** `https://slides.googleapis.com/v1`
 
+#### Tags
 
-#### Tags:
-
- - presentations, productivity, collaboration
+- Collaboration
+- Presentations
+- Productivity
 
 #### Properties
 
 - [Documentation](https://developers.google.com/slides/how-tos/overview)
-- [OpenAPI](https://slides.googleapis.com/$discovery/rest?version=v1)
+- [OpenAPI](https://slides.googleapis.com/$discovery/rest?version=v1) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Samples](https://developers.google.com/slides/samples)
+- [Postman Collection](collections/google-suite.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-suite.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Google Meet API
+
 The Google Meet API allows developers to build applications that integrate with Google Meet.
 
-**Human URL:** [https://developers.google.com/meet](https://developers.google.com/meet)
+- **Human URL:** [https://developers.google.com/meet](https://developers.google.com/meet)
+- **Base URL:** `https://meet.googleapis.com/v2`
 
+#### Tags
 
-#### Tags:
-
- - video-conferencing, meetings, collaboration, communication
+- Collaboration
+- Communication
+- Meetings
+- Video-Conferencing
 
 #### Properties
 
 - [Documentation](https://developers.google.com/meet/api/guides/overview)
 - [Reference](https://developers.google.com/meet/api/reference/rest)
+- [Postman Collection](collections/google-suite.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-suite.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Google Chat API
+
 The Google Chat API allows you to build Chat apps that bring your services into Google Chat.
 
-**Human URL:** [https://developers.google.com/chat](https://developers.google.com/chat)
+- **Human URL:** [https://developers.google.com/chat](https://developers.google.com/chat)
+- **Base URL:** `https://chat.googleapis.com/v1`
 
+#### Tags
 
-#### Tags:
-
- - messaging, collaboration, communication, bots
+- Bots
+- Collaboration
+- Communication
+- Messaging
 
 #### Properties
 
 - [Documentation](https://developers.google.com/chat/api/guides/overview)
-- [OpenAPI](https://chat.googleapis.com/$discovery/rest?version=v1)
+- [OpenAPI](https://chat.googleapis.com/$discovery/rest?version=v1) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Concepts](https://developers.google.com/chat/api/guides/concepts)
+- [Postman Collection](collections/google-suite.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-suite.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Google Admin SDK
+
 The Admin SDK lets administrators of Google Workspace domains programmatically manage users, groups, and resources.
 
-**Human URL:** [https://developers.google.com/admin-sdk](https://developers.google.com/admin-sdk)
+- **Human URL:** [https://developers.google.com/admin-sdk](https://developers.google.com/admin-sdk)
+- **Base URL:** `https://admin.googleapis.com`
 
+#### Tags
 
-#### Tags:
-
- - administration, management, users, groups
+- Administration
+- Groups
+- Management
+- Users
 
 #### Properties
 
 - [Documentation](https://developers.google.com/admin-sdk/directory/v1/guides)
-- [Directory API](https://developers.google.com/admin-sdk/directory)
-- [Reports API](https://developers.google.com/admin-sdk/reports)
-- [OpenAPI](https://admin.googleapis.com/$discovery/rest?version=directory_v1)
+- [Directory  A P I](https://developers.google.com/admin-sdk/directory)
+- [Reports  A P I](https://developers.google.com/admin-sdk/reports)
+- [OpenAPI](https://admin.googleapis.com/$discovery/rest?version=directory_v1) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/google-suite.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-suite.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Google Forms API
+
 The Google Forms API provides programmatic access to create, modify, and retrieve form content and responses.
 
-**Human URL:** [https://developers.google.com/forms/api](https://developers.google.com/forms/api)
+- **Human URL:** [https://developers.google.com/forms/api](https://developers.google.com/forms/api)
+- **Base URL:** `https://forms.googleapis.com/v1`
 
+#### Tags
 
-#### Tags:
-
- - forms, surveys, data-collection, productivity
+- Data-Collection
+- Forms
+- Productivity
+- Surveys
 
 #### Properties
 
 - [Documentation](https://developers.google.com/forms/api/guides)
 - [Reference](https://developers.google.com/forms/api/reference/rest)
+- [Postman Collection](collections/google-suite.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-suite.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ## Common Properties
 
+- [GitHub Organization](https://github.com/googleworkspace)
+- [LinkedIn](https://www.linkedin.com/showcase/googleworkspace)
 - [Authentication](https://developers.google.com/identity/protocols/oauth2)
 - [Console](https://console.cloud.google.com/)
 - [Terms of Service](https://developers.google.com/terms)
 - [Privacy Policy](https://policies.google.com/privacy)
-- [Status](https://www.google.com/appsstatus/dashboard/)
+- [Status Page](https://www.google.com/appsstatus/dashboard/)
+- [Integrations](https://workspace.google.com/integrations/)
 
 ## Maintainers
 
-**FN:** Google
-
-**Email:** google-workspace-devs@google.com
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
