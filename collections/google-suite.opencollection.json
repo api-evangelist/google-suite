@@ -1,0 +1,305 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gmail API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/v2/auth",
+      "accessTokenUrl": "https://oauth2.googleapis.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get user profile",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://gmail.googleapis.com/gmail/v1/users/:userId/profile",
+        "params": [
+          {
+            "name": "userId",
+            "value": "me",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get user profile"
+    },
+    {
+      "info": {
+        "name": "Watch for changes",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://gmail.googleapis.com/gmail/v1/users/:userId/watch",
+        "params": [
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Enable push notifications for mailbox changes via Cloud Pub/Sub."
+    },
+    {
+      "info": {
+        "name": "Stop push notifications",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://gmail.googleapis.com/gmail/v1/users/:userId/stop",
+        "params": [
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Stop push notifications"
+    },
+    {
+      "info": {
+        "name": "List drafts",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://gmail.googleapis.com/gmail/v1/users/:userId/drafts",
+        "params": [
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "q",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "maxResults",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageToken",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "includeSpamTrash",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List drafts"
+    },
+    {
+      "info": {
+        "name": "Create draft",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://gmail.googleapis.com/gmail/v1/users/:userId/drafts",
+        "params": [
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create draft"
+    },
+    {
+      "info": {
+        "name": "Send draft",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://gmail.googleapis.com/gmail/v1/users/:userId/drafts/send",
+        "params": [
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Send draft"
+    },
+    {
+      "info": {
+        "name": "List messages",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://gmail.googleapis.com/gmail/v1/users/:userId/messages",
+        "params": [
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "q",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "labelIds",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "maxResults",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageToken",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "includeSpamTrash",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List messages"
+    },
+    {
+      "info": {
+        "name": "Send message",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://gmail.googleapis.com/gmail/v1/users/:userId/messages/send",
+        "params": [
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Send message"
+    },
+    {
+      "info": {
+        "name": "List labels",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://gmail.googleapis.com/gmail/v1/users/:userId/labels",
+        "params": [
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List labels"
+    },
+    {
+      "info": {
+        "name": "List threads",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://gmail.googleapis.com/gmail/v1/users/:userId/threads",
+        "params": [
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "q",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "labelIds",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "maxResults",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageToken",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List threads"
+    },
+    {
+      "info": {
+        "name": "Update vacation settings",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://gmail.googleapis.com/gmail/v1/users/:userId/settings/vacation",
+        "params": [
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update vacation settings"
+    }
+  ],
+  "bundled": true
+}

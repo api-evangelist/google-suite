@@ -1,0 +1,1376 @@
+{
+  "item": [
+    {
+      "id": "e5ef65dc-cd90-4d6e-bf9a-cdaa47d8fa0c",
+      "name": "Get user profile",
+      "request": {
+        "name": "Get user profile",
+        "description": {},
+        "url": {
+          "path": [
+            "gmail",
+            "v1",
+            "users",
+            ":userId",
+            "profile"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "e2dcb2e5-0dd4-49f6-8922-55a5014cb30a",
+          "name": "User profile",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "profile"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"emailAddress\": \"string\",\n  \"messagesTotal\": 5263,\n  \"threadsTotal\": 59,\n  \"historyId\": \"string\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "63ff6de9-868e-4290-98ca-a3ed6f1abd2e",
+      "name": "Watch for changes",
+      "request": {
+        "name": "Watch for changes",
+        "description": {
+          "content": "Enable push notifications for mailbox changes via Cloud Pub/Sub.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "gmail",
+            "v1",
+            "users",
+            ":userId",
+            "watch"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"labelIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"labelFilterAction\": \"<string>\",\n  \"topicName\": \"<string>\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "ba67bae4-039c-47e7-8740-15855c2e3f85",
+          "name": "Watch response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "watch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"labelIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"labelFilterAction\": \"<string>\",\n  \"topicName\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"historyId\": \"string\",\n  \"expiration\": \"string\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "55db45c4-4bc0-46c3-90f1-9b28f0d7b9de",
+      "name": "Stop push notifications",
+      "request": {
+        "name": "Stop push notifications",
+        "description": {},
+        "url": {
+          "path": [
+            "gmail",
+            "v1",
+            "users",
+            ":userId",
+            "stop"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "1f24b8ad-5010-46ba-9604-145f4e2bb35c",
+          "name": "Empty",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "stop"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "b6e81422-eee9-45ea-a9b7-4aa0e7edbc2c",
+      "name": "List drafts",
+      "request": {
+        "name": "List drafts",
+        "description": {},
+        "url": {
+          "path": [
+            "gmail",
+            "v1",
+            "users",
+            ":userId",
+            "drafts"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "q",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "maxResults",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "pageToken",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "includeSpamTrash",
+              "value": "<boolean>"
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "fce34635-3f48-4004-ad04-4a8494d37ce8",
+          "name": "Draft list",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "drafts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "pageToken",
+                  "value": "<string>"
+                },
+                {
+                  "key": "includeSpamTrash",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"drafts\": [\n    {\n      \"id\": \"string\",\n      \"message\": {\n        \"id\": \"string\",\n        \"threadId\": \"string\",\n        \"labelIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"snippet\": \"string\",\n        \"historyId\": \"string\",\n        \"internalDate\": \"string\",\n        \"payload\": {},\n        \"sizeEstimate\": 84,\n        \"raw\": \"string\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"message\": {\n        \"id\": \"string\",\n        \"threadId\": \"string\",\n        \"labelIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"snippet\": \"string\",\n        \"historyId\": \"string\",\n        \"internalDate\": \"string\",\n        \"payload\": {},\n        \"sizeEstimate\": 8150,\n        \"raw\": \"string\"\n      }\n    }\n  ],\n  \"nextPageToken\": \"string\",\n  \"resultSizeEstimate\": 5899\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "3f55eb46-c1ad-422c-83ba-cffc5c60b81b",
+      "name": "Create draft",
+      "request": {
+        "name": "Create draft",
+        "description": {},
+        "url": {
+          "path": [
+            "gmail",
+            "v1",
+            "users",
+            ":userId",
+            "drafts"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"<string>\",\n  \"message\": {\n    \"id\": \"<string>\",\n    \"threadId\": \"<string>\",\n    \"labelIds\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"snippet\": \"<string>\",\n    \"historyId\": \"<string>\",\n    \"internalDate\": \"<string>\",\n    \"payload\": \"<object>\",\n    \"sizeEstimate\": \"<integer>\",\n    \"raw\": \"<byte>\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "1582d3fe-e44d-435f-bc11-57bf3f2b9c15",
+          "name": "Created draft",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "drafts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"message\": {\n    \"id\": \"string\",\n    \"threadId\": \"string\",\n    \"labelIds\": [\n      \"string\",\n      \"string\"\n    ],\n    \"snippet\": \"string\",\n    \"historyId\": \"string\",\n    \"internalDate\": \"string\",\n    \"payload\": {},\n    \"sizeEstimate\": 1720,\n    \"raw\": \"string\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"id\": \"string\",\n  \"message\": {\n    \"id\": \"string\",\n    \"threadId\": \"string\",\n    \"labelIds\": [\n      \"string\",\n      \"string\"\n    ],\n    \"snippet\": \"string\",\n    \"historyId\": \"string\",\n    \"internalDate\": \"string\",\n    \"payload\": {},\n    \"sizeEstimate\": 7516,\n    \"raw\": \"string\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "070c1677-3e99-4ea2-8b06-7f76fb66899e",
+      "name": "Send draft",
+      "request": {
+        "name": "Send draft",
+        "description": {},
+        "url": {
+          "path": [
+            "gmail",
+            "v1",
+            "users",
+            ":userId",
+            "drafts",
+            "send"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"<string>\",\n  \"message\": {\n    \"id\": \"<string>\",\n    \"threadId\": \"<string>\",\n    \"labelIds\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"snippet\": \"<string>\",\n    \"historyId\": \"<string>\",\n    \"internalDate\": \"<string>\",\n    \"payload\": \"<object>\",\n    \"sizeEstimate\": \"<integer>\",\n    \"raw\": \"<byte>\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "e6629c21-47c7-4ccf-a62f-4683b0278bab",
+          "name": "Sent message",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "drafts",
+                "send"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"message\": {\n    \"id\": \"string\",\n    \"threadId\": \"string\",\n    \"labelIds\": [\n      \"string\",\n      \"string\"\n    ],\n    \"snippet\": \"string\",\n    \"historyId\": \"string\",\n    \"internalDate\": \"string\",\n    \"payload\": {},\n    \"sizeEstimate\": 1720,\n    \"raw\": \"string\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"id\": \"string\",\n  \"threadId\": \"string\",\n  \"labelIds\": [\n    \"string\",\n    \"string\"\n  ],\n  \"snippet\": \"string\",\n  \"historyId\": \"string\",\n  \"internalDate\": \"string\",\n  \"payload\": {},\n  \"sizeEstimate\": 1277,\n  \"raw\": \"string\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "f5101665-a547-4551-a859-5aa5a0ea7b9c",
+      "name": "List messages",
+      "request": {
+        "name": "List messages",
+        "description": {},
+        "url": {
+          "path": [
+            "gmail",
+            "v1",
+            "users",
+            ":userId",
+            "messages"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "q",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "labelIds",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "labelIds",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "maxResults",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "pageToken",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "includeSpamTrash",
+              "value": "<boolean>"
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "ed070cf9-eeef-41fd-8f5a-2cc806163254",
+          "name": "Message list",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "messages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "<string>"
+                },
+                {
+                  "key": "labelIds",
+                  "value": "<string>"
+                },
+                {
+                  "key": "labelIds",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "pageToken",
+                  "value": "<string>"
+                },
+                {
+                  "key": "includeSpamTrash",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"messages\": [\n    {\n      \"id\": \"string\",\n      \"threadId\": \"string\",\n      \"labelIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"snippet\": \"string\",\n      \"historyId\": \"string\",\n      \"internalDate\": \"string\",\n      \"payload\": {},\n      \"sizeEstimate\": 1406,\n      \"raw\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"threadId\": \"string\",\n      \"labelIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"snippet\": \"string\",\n      \"historyId\": \"string\",\n      \"internalDate\": \"string\",\n      \"payload\": {},\n      \"sizeEstimate\": 9860,\n      \"raw\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\",\n  \"resultSizeEstimate\": 4812\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "37602958-5652-4c73-808a-1a10fe2260ed",
+      "name": "Send message",
+      "request": {
+        "name": "Send message",
+        "description": {},
+        "url": {
+          "path": [
+            "gmail",
+            "v1",
+            "users",
+            ":userId",
+            "messages",
+            "send"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"<string>\",\n  \"threadId\": \"<string>\",\n  \"labelIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"snippet\": \"<string>\",\n  \"historyId\": \"<string>\",\n  \"internalDate\": \"<string>\",\n  \"payload\": \"<object>\",\n  \"sizeEstimate\": \"<integer>\",\n  \"raw\": \"<byte>\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "725c96ac-e57d-445b-8e18-d9d37e29cb58",
+          "name": "Sent message",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "messages",
+                "send"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"threadId\": \"<string>\",\n  \"labelIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"snippet\": \"<string>\",\n  \"historyId\": \"<string>\",\n  \"internalDate\": \"<string>\",\n  \"payload\": \"<object>\",\n  \"sizeEstimate\": \"<integer>\",\n  \"raw\": \"<byte>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"id\": \"string\",\n  \"threadId\": \"string\",\n  \"labelIds\": [\n    \"string\",\n    \"string\"\n  ],\n  \"snippet\": \"string\",\n  \"historyId\": \"string\",\n  \"internalDate\": \"string\",\n  \"payload\": {},\n  \"sizeEstimate\": 1277,\n  \"raw\": \"string\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "72b959d2-8ae7-41f0-aecb-eaf737ec2d95",
+      "name": "List labels",
+      "request": {
+        "name": "List labels",
+        "description": {},
+        "url": {
+          "path": [
+            "gmail",
+            "v1",
+            "users",
+            ":userId",
+            "labels"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "20f03330-8b19-4f65-b49d-193f63bc29e9",
+          "name": "Label list",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "labels"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"labels\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"messageListVisibility\": \"string\",\n      \"labelListVisibility\": \"string\",\n      \"type\": \"string\",\n      \"messagesTotal\": 6266,\n      \"messagesUnread\": 8511,\n      \"threadsTotal\": 5836,\n      \"threadsUnread\": 4963,\n      \"color\": {\n        \"textColor\": \"string\",\n        \"backgroundColor\": \"string\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"messageListVisibility\": \"string\",\n      \"labelListVisibility\": \"string\",\n      \"type\": \"string\",\n      \"messagesTotal\": 4326,\n      \"messagesUnread\": 4756,\n      \"threadsTotal\": 555,\n      \"threadsUnread\": 4833,\n      \"color\": {\n        \"textColor\": \"string\",\n        \"backgroundColor\": \"string\"\n      }\n    }\n  ]\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a386f2bd-8628-4781-a071-15439c229d33",
+      "name": "List threads",
+      "request": {
+        "name": "List threads",
+        "description": {},
+        "url": {
+          "path": [
+            "gmail",
+            "v1",
+            "users",
+            ":userId",
+            "threads"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "q",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "labelIds",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "labelIds",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "maxResults",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "pageToken",
+              "value": "<string>"
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "9fcb529f-5516-4bf3-9d9c-d5ec6461727d",
+          "name": "Thread list",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "threads"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "<string>"
+                },
+                {
+                  "key": "labelIds",
+                  "value": "<string>"
+                },
+                {
+                  "key": "labelIds",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "pageToken",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"nextPageToken\": \"string\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "30bb5f38-2665-4dd6-8a40-9506d034de64",
+      "name": "Update vacation settings",
+      "request": {
+        "name": "Update vacation settings",
+        "description": {},
+        "url": {
+          "path": [
+            "gmail",
+            "v1",
+            "users",
+            ":userId",
+            "settings",
+            "vacation"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "PUT",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"enableAutoReply\": \"<boolean>\",\n  \"responseSubject\": \"<string>\",\n  \"responseBodyPlainText\": \"<string>\",\n  \"responseBodyHtml\": \"<string>\",\n  \"restrictToContacts\": \"<boolean>\",\n  \"restrictToDomain\": \"<boolean>\",\n  \"startTime\": \"<string>\",\n  \"endTime\": \"<string>\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "0022ec41-4f5a-4cde-8ba5-3f2da0c7e2cb",
+          "name": "Updated vacation settings",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "settings",
+                "vacation"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"enableAutoReply\": \"<boolean>\",\n  \"responseSubject\": \"<string>\",\n  \"responseBodyPlainText\": \"<string>\",\n  \"responseBodyHtml\": \"<string>\",\n  \"restrictToContacts\": \"<boolean>\",\n  \"restrictToDomain\": \"<boolean>\",\n  \"startTime\": \"<string>\",\n  \"endTime\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://gmail.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "gmail.readonly gmail.modify gmail.send gmail.labels gmail.compose"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/v2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "f753c0f7-d471-41d2-9b48-4c3bedf15ff1",
+    "name": "Gmail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Gmail API lets you view and manage Gmail mailbox data including\nthreads, messages, drafts, labels, settings, and watch/push notifications.\nThis OpenAPI describes the Gmail surface of the Google Workspace (G Suite)\nAPI family.\n",
+      "type": "text/plain"
+    }
+  }
+}
