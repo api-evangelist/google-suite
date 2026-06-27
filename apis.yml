@@ -45,7 +45,7 @@ apis:
         url: https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest
       - type: Authentication
         url: https://developers.google.com/calendar/api/guides/auth
-      - type: Quickstart
+      - type: GettingStarted
         url: https://developers.google.com/calendar/api/quickstart/python
   - name: Google Drive API
     description: The Google Drive API allows you to create apps that leverage Google Drive cloud storage.
@@ -81,7 +81,7 @@ apis:
         url: https://developers.google.com/docs/api/how-tos/overview
       - type: OpenAPI
         url: https://docs.googleapis.com/$discovery/rest?version=v1
-      - type: Quickstart
+      - type: GettingStarted
         url: https://developers.google.com/docs/api/quickstart/python
   - name: Google Sheets API
     description: The Google Sheets API lets you read, write, and format Google Sheets data with your preferred programming language.
