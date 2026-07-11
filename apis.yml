@@ -185,6 +185,12 @@ apis:
       - type: Reference
         url: https://developers.google.com/forms/api/reference/rest
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-suite-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-suite-domain-security.yml
+  - type: Authentication
+    url: authentication/google-suite-authentication.yml
   - type: OAuthScopes
     url: scopes/google-suite-scopes.yml
   - type: GitHubOrganization
