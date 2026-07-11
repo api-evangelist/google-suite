@@ -1,0 +1,41 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/google-suite-openapi.yml
+schemes:
+- name: OAuth2
+  source: openapi/google-suite-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+    tokenUrl: https://oauth2.googleapis.com/token
+scopes:
+- scope: gmail.compose
+  description: Create, read, update, and delete drafts; send messages and drafts
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-suite-openapi.yml
+- scope: gmail.labels
+  description: Manage mailbox labels
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-suite-openapi.yml
+- scope: gmail.modify
+  description: All read/write operations except immediate, permanent deletion
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-suite-openapi.yml
+- scope: gmail.readonly
+  description: Read all resources and metadata
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-suite-openapi.yml
+- scope: gmail.send
+  description: Send messages only
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-suite-openapi.yml

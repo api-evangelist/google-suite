@@ -185,6 +185,8 @@ apis:
       - type: Reference
         url: https://developers.google.com/forms/api/reference/rest
 common:
+  - type: OAuthScopes
+    url: scopes/google-suite-scopes.yml
   - type: GitHubOrganization
     url: https://github.com/googleworkspace
   - type: LinkedIn
@@ -201,6 +203,8 @@ common:
     url: https://www.google.com/appsstatus/dashboard/
   - type: Integrations
     url: https://workspace.google.com/integrations/
+  - url: https://workspaceupdates.googleblog.com/feeds/posts/default?alt=rss
+    type: Blog
 integrations:
   - name: Gmail
   - name: Drive
