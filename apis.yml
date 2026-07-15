@@ -185,6 +185,8 @@ apis:
       - type: Reference
         url: https://developers.google.com/forms/api/reference/rest
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-suite-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-suite-vulnerability-disclosure.yml
   - type: DomainSecurity
