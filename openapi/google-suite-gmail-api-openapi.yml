@@ -1,31 +1,41 @@
 openapi: 3.1.0
 info:
   title: Gmail API
-  description: |
-    The Gmail API lets you view and manage Gmail mailbox data including
+  description: 'The Gmail API lets you view and manage Gmail mailbox data including
+
     threads, messages, drafts, labels, settings, and watch/push notifications.
+
     This OpenAPI describes the Gmail surface of the Google Workspace (G Suite)
+
     API family.
+
+    '
   version: v1
 servers:
-  - url: https://gmail.googleapis.com
+- url: https://gmail.googleapis.com
 security:
-  - OAuth2: [gmail.readonly]
-  - OAuth2: [gmail.modify]
-  - OAuth2: [gmail.send]
-  - OAuth2: [gmail.labels]
+- OAuth2:
+  - gmail.readonly
+- OAuth2:
+  - gmail.modify
+- OAuth2:
+  - gmail.send
+- OAuth2:
+  - gmail.labels
+tags:
+- name: Gmail
 paths:
   /gmail/v1/users/{userId}/profile:
     get:
       summary: Get user profile
       operationId: getProfile
       parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
-            type: string
-          example: me
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+        example: me
       responses:
         '200':
           description: User profile
@@ -42,17 +52,19 @@ paths:
                     type: integer
                   historyId:
                     type: string
+      tags:
+      - Gmail
   /gmail/v1/users/{userId}/watch:
     post:
       summary: Watch for changes
       description: Enable push notifications for mailbox changes via Cloud Pub/Sub.
       operationId: watch
       parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -66,7 +78,9 @@ paths:
                     type: string
                 labelFilterAction:
                   type: string
-                  enum: [include, exclude]
+                  enum:
+                  - include
+                  - exclude
                 topicName:
                   type: string
       responses:
@@ -81,45 +95,49 @@ paths:
                     type: string
                   expiration:
                     type: string
+      tags:
+      - Gmail
   /gmail/v1/users/{userId}/stop:
     post:
       summary: Stop push notifications
       operationId: stop
       parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Empty
+      tags:
+      - Gmail
   /gmail/v1/users/{userId}/drafts:
     get:
       summary: List drafts
       operationId: listDrafts
       parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: q
-          in: query
-          schema:
-            type: string
-        - name: maxResults
-          in: query
-          schema:
-            type: integer
-        - name: pageToken
-          in: query
-          schema:
-            type: string
-        - name: includeSpamTrash
-          in: query
-          schema:
-            type: boolean
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: q
+        in: query
+        schema:
+          type: string
+      - name: maxResults
+        in: query
+        schema:
+          type: integer
+      - name: pageToken
+        in: query
+        schema:
+          type: string
+      - name: includeSpamTrash
+        in: query
+        schema:
+          type: boolean
       responses:
         '200':
           description: Draft list
@@ -136,15 +154,17 @@ paths:
                     type: string
                   resultSizeEstimate:
                     type: integer
+      tags:
+      - Gmail
     post:
       summary: Create draft
       operationId: createDraft
       parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -158,16 +178,18 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Draft'
+      tags:
+      - Gmail
   /gmail/v1/users/{userId}/drafts/send:
     post:
       summary: Send draft
       operationId: sendDraft
       parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -181,38 +203,40 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Message'
+      tags:
+      - Gmail
   /gmail/v1/users/{userId}/messages:
     get:
       summary: List messages
       operationId: listMessages
       parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: q
+        in: query
+        schema:
+          type: string
+      - name: labelIds
+        in: query
+        schema:
+          type: array
+          items:
             type: string
-        - name: q
-          in: query
-          schema:
-            type: string
-        - name: labelIds
-          in: query
-          schema:
-            type: array
-            items:
-              type: string
-        - name: maxResults
-          in: query
-          schema:
-            type: integer
-        - name: pageToken
-          in: query
-          schema:
-            type: string
-        - name: includeSpamTrash
-          in: query
-          schema:
-            type: boolean
+      - name: maxResults
+        in: query
+        schema:
+          type: integer
+      - name: pageToken
+        in: query
+        schema:
+          type: string
+      - name: includeSpamTrash
+        in: query
+        schema:
+          type: boolean
       responses:
         '200':
           description: Message list
@@ -229,16 +253,18 @@ paths:
                     type: string
                   resultSizeEstimate:
                     type: integer
+      tags:
+      - Gmail
   /gmail/v1/users/{userId}/messages/send:
     post:
       summary: Send message
       operationId: sendMessage
       parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -252,16 +278,18 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Message'
+      tags:
+      - Gmail
   /gmail/v1/users/{userId}/labels:
     get:
       summary: List labels
       operationId: listLabels
       parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Label list
@@ -274,34 +302,36 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/Label'
+      tags:
+      - Gmail
   /gmail/v1/users/{userId}/threads:
     get:
       summary: List threads
       operationId: listThreads
       parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: q
+        in: query
+        schema:
+          type: string
+      - name: labelIds
+        in: query
+        schema:
+          type: array
+          items:
             type: string
-        - name: q
-          in: query
-          schema:
-            type: string
-        - name: labelIds
-          in: query
-          schema:
-            type: array
-            items:
-              type: string
-        - name: maxResults
-          in: query
-          schema:
-            type: integer
-        - name: pageToken
-          in: query
-          schema:
-            type: string
+      - name: maxResults
+        in: query
+        schema:
+          type: integer
+      - name: pageToken
+        in: query
+        schema:
+          type: string
       responses:
         '200':
           description: Thread list
@@ -316,16 +346,18 @@ paths:
                       type: object
                   nextPageToken:
                     type: string
+      tags:
+      - Gmail
   /gmail/v1/users/{userId}/settings/vacation:
     put:
       summary: Update vacation settings
       operationId: updateVacationSettings
       parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -356,52 +388,10 @@ paths:
             application/json:
               schema:
                 type: object
+      tags:
+      - Gmail
 components:
-  securitySchemes:
-    OAuth2:
-      type: oauth2
-      flows:
-        authorizationCode:
-          authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
-          tokenUrl: https://oauth2.googleapis.com/token
-          scopes:
-            gmail.readonly: Read all resources and metadata
-            gmail.modify: All read/write operations except immediate, permanent deletion
-            gmail.send: Send messages only
-            gmail.labels: Manage mailbox labels
-            gmail.compose: Create, read, update, and delete drafts; send messages and drafts
   schemas:
-    Message:
-      type: object
-      properties:
-        id:
-          type: string
-        threadId:
-          type: string
-        labelIds:
-          type: array
-          items:
-            type: string
-        snippet:
-          type: string
-        historyId:
-          type: string
-        internalDate:
-          type: string
-        payload:
-          type: object
-        sizeEstimate:
-          type: integer
-        raw:
-          type: string
-          format: byte
-    Draft:
-      type: object
-      properties:
-        id:
-          type: string
-        message:
-          $ref: '#/components/schemas/Message'
     Label:
       type: object
       properties:
@@ -430,3 +420,47 @@ components:
               type: string
             backgroundColor:
               type: string
+    Draft:
+      type: object
+      properties:
+        id:
+          type: string
+        message:
+          $ref: '#/components/schemas/Message'
+    Message:
+      type: object
+      properties:
+        id:
+          type: string
+        threadId:
+          type: string
+        labelIds:
+          type: array
+          items:
+            type: string
+        snippet:
+          type: string
+        historyId:
+          type: string
+        internalDate:
+          type: string
+        payload:
+          type: object
+        sizeEstimate:
+          type: integer
+        raw:
+          type: string
+          format: byte
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            gmail.readonly: Read all resources and metadata
+            gmail.modify: All read/write operations except immediate, permanent deletion
+            gmail.send: Send messages only
+            gmail.labels: Manage mailbox labels
+            gmail.compose: Create, read, update, and delete drafts; send messages and drafts
