@@ -1,0 +1,14 @@
+{
+  "provider": "google-suite",
+  "sources": [
+    "google-suite-gmail-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-suite-gmail-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
