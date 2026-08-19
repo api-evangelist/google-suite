@@ -18,7 +18,7 @@ description: Google Workspace (formerly G Suite) is a collection of cloud comput
 url: https://workspace.google.com/
 created: '2024-01-15'
 modified: '2026-04-28'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 type: Index
 apis:
 - name: Google Meet API
