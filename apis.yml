@@ -29,6 +29,11 @@ apis:
   baseURL: https://meet.googleapis.com/v2
   tags:
   - Collaboration
+  - Communications
+  - Meetings
+  - Video Conferencing
+  tags_raw:
+  - Collaboration
   - Communication
   - Meetings
   - Video-Conferencing
@@ -45,6 +50,11 @@ apis:
   humanURL: https://developers.google.com/forms/api
   baseURL: https://forms.googleapis.com/v1
   tags:
+  - Data Collection
+  - Forms
+  - Productivity
+  - Surveys
+  tags_raw:
   - Data-Collection
   - Forms
   - Productivity
