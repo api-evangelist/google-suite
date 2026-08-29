@@ -112,11 +112,11 @@ apis:
     url: https://developers.google.com/sheets/api/guides/concepts
   - type: Authentication
     url: https://developers.google.com/sheets/api/guides/authorizing
-  - type: Samples
+  - type: Examples
     url: https://developers.google.com/sheets/api/samples
   - type: Documentation
     url: https://developers.google.com/slides/how-tos/overview
-  - type: Samples
+  - type: Examples
     url: https://developers.google.com/slides/samples
   - type: Documentation
     url: https://developers.google.com/chat/api/guides/overview
