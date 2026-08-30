@@ -43,7 +43,7 @@ apis:
   - Collaboration
   - Communications
   - Meetings
-  - Video Conferencing
+  - Video-Conferencing
   tags_raw:
   - Collaboration
   - Communication
@@ -62,7 +62,7 @@ apis:
   humanURL: https://developers.google.com/forms/api
   baseURL: https://forms.googleapis.com/v1
   tags:
-  - Data Collection
+  - Data-Collection
   - Forms
   - Productivity
   - Surveys
