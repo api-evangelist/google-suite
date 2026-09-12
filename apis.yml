@@ -129,6 +129,8 @@ apis:
   - type: Reports API
     url: https://developers.google.com/admin-sdk/reports
 common:
+  - type: Website
+    url: https://www.google.com/
   - type: AgenticAccess
     url: agentic-access/google-suite-agentic-access.yml
   - type: VulnerabilityDisclosure
